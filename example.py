@@ -166,6 +166,7 @@ def run_example():
     print_item(vault)
 
     # The resource URI for keyvault needs to be specified to get the auth token for the same
+    # If you are targeting the Public Azure Cloud, the following vault_resource_uri must be set to 'https://vault.azure.net'
     vault_resource_uri = mystack_cloud.endpoints.active_directory_resource_id.replace("management", "vault")
     kv_dp_credentials, subscription_id, mystack_cloud = get_credentials_cert(vault_resource_uri)
 

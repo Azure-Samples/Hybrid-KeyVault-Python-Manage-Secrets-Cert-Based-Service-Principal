@@ -60,7 +60,7 @@ This sample demonstrates how to manage key vaults and secrets in AzureStack usin
     export ARM_ENDPOINT={your AzureStack Resource Manager Endpoint}
     ```
     - In case of Windows, use 'set ' instead of 'export'.
-    
+
 7. Run the sample.
 
     ```
@@ -127,6 +127,7 @@ resource_client = ResourceManagementClient(credentials, subscription_id,
                                            base_url=mystack_cloud.endpoints.resource_manager)
 
 # The resource URI for keyvault needs to be specified to get the auth token for the same
+# If you are targeting the Public Azure Cloud, the following vault_resource_uri must be set to 'https://vault.azure.net'
 vault_resource_uri = mystack_cloud.endpoints.active_directory_resource_id.replace("management", "vault")
 kv_dp_credentials, subscription_id, mystack_cloud = get_credentials_cert(vault_resource_uri)
 
