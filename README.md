@@ -1,7 +1,11 @@
 ---
-services: Azure-Stack
-platforms: python
-author: viananth
+page_type: sample
+languages:
+- python
+products:
+- azure
+description: "This sample demonstrates how to manage key vaults and secrets in AzureStack using the Python SDK with a certificate based service principal authentication."
+urlFragment: Hybrid-KeyVault-Python-Manage-Secrets-Cert-Based-Service-Principal
 ---
 
 # Hybrid-KeyVault-Python-Manage-Secrets-Cert-Based-Service-Principal
